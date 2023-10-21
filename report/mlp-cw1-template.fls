@@ -956,9 +956,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/t1xr.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmr.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/t1xsl.vf
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmro.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxsl.tfm
 INPUT ./figures/empty_acc_curve_width.png
 INPUT ./figures/empty_acc_curve_width.png
 INPUT figures/empty_acc_curve_width.png
@@ -979,6 +976,9 @@ INPUT ./figures/empty_error_curve_depth.png
 INPUT figures/empty_error_curve_depth.png
 INPUT ./figures/empty_error_curve_depth.png
 INPUT ./figures/empty_error_curve_depth.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/t1xsl.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmro.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxsl.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/t1xi.tfm
@@ -994,9 +994,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmbi.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txmi.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txbmi.vf
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxbmi.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmbi.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/t1xi.tfm
 INPUT ./figures/empty_dropout_plot.png
 INPUT ./figures/empty_dropout_plot.png
@@ -1008,6 +1005,9 @@ INPUT ./figures/empty_wd_plot.png
 INPUT figures/empty_wd_plot.png
 INPUT ./figures/empty_wd_plot.png
 INPUT ./figures/empty_wd_plot.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txbmi.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxbmi.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmbi.tfm
 INPUT ./mlp-cw1-template.bbl
 INPUT mlp-cw1-template.bbl
 INPUT ./mlp-cw1-template.bbl

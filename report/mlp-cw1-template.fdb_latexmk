@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex mlp-cw1-template"] 1697717600 "mlp-cw1-template.aux" "mlp-cw1-template.bbl" "mlp-cw1-template" 1697889042 0
+["bibtex mlp-cw1-template"] 1697890303 "mlp-cw1-template.aux" "mlp-cw1-template.bbl" "mlp-cw1-template" 1697890674 0
   "./icml2017.bst" 1697496318 27014 3bf38cf1c3514ce2660b1751e86eb994 ""
   "./refs.bib" 1697496318 1377 5340cb6bab3b0f6944f83c0790bd8be1 ""
-  "mlp-cw1-template.aux" 1697889041 4265 26c92bdaed841ed1454b4cc7ea188674 "pdflatex"
+  "mlp-cw1-template.aux" 1697890674 4265 d0a4c712cb2ddaa39ad263f5121d765b "pdflatex"
   (generated)
   "mlp-cw1-template.bbl"
   "mlp-cw1-template.blg"
   (rewritten before read)
-["pdflatex"] 1697889040 "/Users/arthakhouri/Desktop/UoE/Machine Learning Practical/MLPractical-UoE/report/mlp-cw1-template.tex" "mlp-cw1-template.pdf" "mlp-cw1-template" 1697889042 0
-  "/Users/arthakhouri/Desktop/UoE/Machine Learning Practical/MLPractical-UoE/report/mlp-cw1-template.tex" 1697716598 12107 7dc924373c6ed2ecd8c09073f56deefe ""
+["pdflatex"] 1697890673 "/Users/arthakhouri/Desktop/UoE/Machine Learning Practical/MLPractical-UoE/report/mlp-cw1-template.tex" "mlp-cw1-template.pdf" "mlp-cw1-template" 1697890674 0
+  "/Users/arthakhouri/Desktop/UoE/Machine Learning Practical/MLPractical-UoE/report/mlp-cw1-template.tex" 1697889307 12107 7dc924373c6ed2ecd8c09073f56deefe ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -154,11 +154,11 @@
   "figures/empty_wd_plot.png" 1697496318 12205 dfce1d222a83faeeae4ba7e3ac7b44e3 ""
   "figures/fig1_acc.png" 1697496318 39538 6a61b205268bd8a312ae94b4ba1a8eb8 ""
   "figures/fig1_err.png" 1697496318 30354 8fb00f2898a7b195ae0b3ee0bf6d519c ""
-  "mlp-cw1-questions.tex" 1697889040 11286 0906ecfb9ac393806eab8d0fad0fb995 ""
-  "mlp-cw1-template.aux" 1697889041 4265 26c92bdaed841ed1454b4cc7ea188674 "pdflatex"
-  "mlp-cw1-template.bbl" 1697717600 1172 c5c44e169ec60600a93b6fbdd5aea9d3 "bibtex mlp-cw1-template"
-  "mlp-cw1-template.out" 1697889041 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "mlp-cw1-template.tex" 1697716598 12107 7dc924373c6ed2ecd8c09073f56deefe ""
+  "mlp-cw1-questions.tex" 1697890673 11708 6d86965897fb1c9b2245dbb8c5019e50 ""
+  "mlp-cw1-template.aux" 1697890674 4265 d0a4c712cb2ddaa39ad263f5121d765b "pdflatex"
+  "mlp-cw1-template.bbl" 1697890303 1172 c5c44e169ec60600a93b6fbdd5aea9d3 "bibtex mlp-cw1-template"
+  "mlp-cw1-template.out" 1697890674 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "mlp-cw1-template.tex" 1697889307 12107 7dc924373c6ed2ecd8c09073f56deefe ""
   "mlp2022.sty" 1697496318 24081 4e2bfcbedb84a2816ab3084545879eef ""
   "mlp2022_includes.tex" 1697496318 1302 27cc518a7ddd1697d102a8a0695fccf4 ""
   (generated)
