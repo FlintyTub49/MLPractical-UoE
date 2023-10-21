@@ -122,13 +122,13 @@ Thus it is very important to choose an appropriate model for the data given to u
 \begin{figure}[t]
     \centering
     \begin{subfigure}{\linewidth}
-        \includegraphics[width=\linewidth]{figures/empty_acc_curve_width.png}
+        \includegraphics[width=\linewidth]{figures/fig2_acc.pdf}
         \caption{accuracy by epoch}
         \label{fig:width_acccurves}
     \end{subfigure} 
     \begin{subfigure}{\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/empty_error_curve_width.png}
+        \includegraphics[width=\linewidth]{figures/fig2_err.pdf}
         \caption{error by epoch}
         \label{fig:width_errorcurves}
     \end{subfigure} 
@@ -145,13 +145,13 @@ Thus it is very important to choose an appropriate model for the data given to u
 \begin{figure}[t]
     \centering
     \begin{subfigure}{\linewidth}
-        \includegraphics[width=\linewidth]{figures/empty_acc_curve_depth.png}
+        \includegraphics[width=\linewidth]{figures/fig3_acc.pdf}
         \caption{accuracy by epoch}
         \label{fig:depth_acccurves}
     \end{subfigure} 
     \begin{subfigure}{\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/empty_error_curve_depth.png}
+        \includegraphics[width=\linewidth]{figures/fig3_err.pdf}
         \caption{error by epoch}
         \label{fig:depth_errorcurves}
     \end{subfigure} 
@@ -197,9 +197,9 @@ Question Table 1 - Fill in Table 1 with the results from your experiments varyin
     \toprule
         \# Hidden Units & Val. Acc. & Train Error & Val. Error\\
     \midrule
-         32            &    --.-   &  -.--- &   -.---            \\
-         64            &    --.-   &  -.---  &   -.---               \\
-         128           &    --.-   &  -.---  &   -.---           \\ 
+         32            &    78.5   &  0.565  &   0.717            \\
+         64            &    80.6   &  0.337  &   0.679               \\
+         128           &    80.2   &  0.159  &   0.999           \\ 
     \bottomrule
     \end{tabular}
     \caption{Validation accuracy (\%) and training/validation error (in terms of cross-entropy error) for varying network widths on the EMNIST dataset.}
@@ -219,9 +219,9 @@ Question Table 2 - Fill in Table 2 with the results from your experiments varyin
     \toprule
         \# Hidden Layers & Val. Acc. & Train Error & Val. Error \\
     \midrule
-         1               &      --.-      &   -.--- & -.---                \\
-         2               &      --.-      &   -.--- & -.---                \\
-         3               &      --.-      &   -.--- & -.---                \\ 
+         1               &      80.2      &   0.159 & 0.999                \\
+         2               &      81.9      &   0.100 & 1.511                \\
+         3               &      82.7      &   0.107 & 1.698                \\ 
     \bottomrule
     \end{tabular}
     \caption{Validation accuracy (\%) and training/validation error (in terms of cross-entropy error) for varying network depths on the EMNIST dataset.}
