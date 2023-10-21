@@ -966,6 +966,9 @@ INPUT ./figures/empty_error_curve_width.png
 INPUT figures/empty_error_curve_width.png
 INPUT ./figures/empty_error_curve_width.png
 INPUT ./figures/empty_error_curve_width.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/t1xsl.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmro.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxsl.tfm
 INPUT ./figures/empty_acc_curve_depth.png
 INPUT ./figures/empty_acc_curve_depth.png
 INPUT figures/empty_acc_curve_depth.png
@@ -976,13 +979,10 @@ INPUT ./figures/empty_error_curve_depth.png
 INPUT figures/empty_error_curve_depth.png
 INPUT ./figures/empty_error_curve_depth.png
 INPUT ./figures/empty_error_curve_depth.png
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/t1xsl.vf
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmro.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxsl.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txr.vf
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/t1xi.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/t1xr.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txr.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txr.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/t1xi.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxi.tfm

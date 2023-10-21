@@ -24,14 +24,16 @@
 
 %% Question 1:
 \newcommand{\questionOne} {
-\youranswer{Question 1 - Summarise why overfitting is a problem.
+\youranswer{Question 1 - Summarise why overfitting is a problem. -
 In overfitting, the model learns too much about the training data and is unable to generalise its 
 learnings for unseen data which leads to poor performance on new data points.}
 }
 
 %% Question 2:
 \newcommand{\questionTwo} {
-\youranswer{Question 2 - Summarise the effect increasing width and depth of the architecture had on overfitting. Increaseing the depth and width slightly increases the model performance overall but if the either or both the width and depth are increased by a lot, the model overfits the training data and returns low accuracy scores for the validation set.}
+\youranswer{Question 2 - Summarise the effect increasing width and depth of the architecture had on overfitting. -
+Increaseing the depth and width slightly increases the model performance overall but if the either or both the width
+and depth are increased by a lot, the model overfits the training data and returns low accuracy scores for any unseen data.}
 }
 
 %% Question 3:
@@ -46,12 +48,20 @@ learnings for unseen data which leads to poor performance on new data points.}
 
 %% Question 5:
 \newcommand{\questionFive} {
-\youranswer{Question 5 - Explain in detail, and in your own words, why overfitting is a problem}
+\youranswer{Question 5 - Explain in detail, and in your own words, why overfitting is a problem -
+Overfitting causes a model to start recognising random deviances and noise present in the training data as a regularity rather than learning the underlying patterns.
+This poor generalisation leads to the model struggling to capture the trends on unseen data points and hence performing poorly on them. This makes the model less reliable to be used in real world applications.
+Another direct consequence of overfitting is that it skews the relationship between variables affecting the interpretability of the model and making it difficult to fix the model.
+Overfitting a model also wastes a lot of resources as it would require a lot of computational power to create a model which won't be able to handle new data points very well.}
 }
 
 %% Question 6:
 \newcommand{\questionSix} {
-\youranswer{Question 6 - Explain the relevance of ``network capacity'' to overfitting}
+\youranswer{Question 6 - Explain the relevance of ``network capacity'' to overfitting -
+Network capacity refers to the ability of the model to learn the general characteristics of the data. When a model is more complex, it starts memorising the data rather than learning the trends from it.
+This usually happens when the model has more room than what is needed for capturing the patterns in the data. If the dataset is small or simple, the basic essense of it can be captured with a small model itself.
+If in scenarios like this, a complex model is used, the model has the capacity to learn more than the general features of the data and will also start to fit the outliers in the data leading to overfitting on the training set.
+Thus it is very important to choose an appropriate model for the data given to us otherwise choosing a complex model with more network capacity will result in overfitting of the data.}
 }
 
 %% Question 7:
