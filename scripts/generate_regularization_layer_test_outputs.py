@@ -1,9 +1,9 @@
 import argparse
-import os
 import numpy as np
-
 import sys
-# sys.path.append('/path/to/mlpractical')
+import os
+os.environ["MLP_DATA_DIR"] = '/Users/arthakhouri/Desktop/UoE/Machine Learning Practical/MLPractical-UoE/data/'
+sys.path.append('/Users/arthakhouri/Desktop/UoE/Machine Learning Practical/MLPractical-UoE')
 
 from mlp.layers import DropoutLayer
 from mlp.penalties import L1Penalty, L2Penalty
