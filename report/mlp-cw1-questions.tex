@@ -107,7 +107,9 @@ in it having the highest error on the validation set (from Table 2).}
 %% Question 11: Discuss whether varying depth affects the results in a consistent way, and whether the results are expected and match well with the prior knowledge (by which we mean your expectations as are formed from the relevant Theory and literature)
 \newcommand{\questionEleven} {
 \youranswer
-{Increasing the depth of the model can be helpful in processing large or complex datasets. But in other situations they can turn out to be counter productive and overfit the data.}
+{Increasing the depth of the model can be helpful in processing large or complex datasets. But in other situations it can turn out to be counter productive and as the model will overfit the data. This is because certain capability is required for the model to process the data, but if the model has more room to capture features, it'll start fitting the 
+noise to the dataset. As the depth of the model increases, there are more neurons available which allow the model to extract more features from the dataset allowing it to overfit the training data and result in poor accuracy scores for unseen data. It also becomes computationally expensive to train the model and the resources will be wasted if the model
+overfits on the training data. We can tackle the problem of overfitting by using methods like Dropout and Regularisation which penalise the model for generalising too much to the training set preventing overfitting.}
 }
 
 
