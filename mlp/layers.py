@@ -663,14 +663,14 @@ class DropoutLayer(StochasticLayer):
         """
         if stochastic:
             if self.share_across_batch:
-                # mask = self.rng.uniform(size=inputs.shape) < self.incl_prob
-                mask = self.rng.binomial(1, self.incl_prob, size = inputs.shape)
+                mask = self.rng.uniform(size=inputs.shape[1:]) < self.incl_prob
+                # mask = self.rng.binomial(1, self.incl_prob, size = inputs.shape)
             else:
-                # mask = self.rng.uniform(size=(inputs.shape[0], inputs.shape[1])) < self.incl_prob
-                mask = self.rng.binomial(1, self.incl_prob, size = (inputs.shape[0], inputs.shape[1]))
+                mask = self.rng.uniform(size=(inputs.shape)) < self.incl_prob
+                # mask = self.rng.binomial(1, self.incl_prob, size = (inputs.shape[0], inputs.shape[1]))
             return inputs * mask
         else:
-            return inputs * self.rng.binomial(1, self.incl_prob, size = (inputs.shape[0], inputs.shape[1]))
+            return inputs * self.incl_prob
 
     def bprop(self, inputs, outputs, grads_wrt_outputs):
         """Back propagates gradients through a layer.
