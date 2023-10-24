@@ -997,6 +997,8 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txbmi.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxbmi.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmbi.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/t1xb.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/t1xb.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/t1xi.tfm
 INPUT ./figures/fig4_dropout.pdf
 INPUT ./figures/fig4_dropout.pdf
@@ -1008,6 +1010,9 @@ INPUT ./figures/fig4_weight.pdf
 INPUT figures/fig4_weight.pdf
 INPUT ./figures/fig4_weight.pdf
 INPUT ./figures/fig4_weight.pdf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/txfonts/t1xb.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxptmb.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxb.tfm
 INPUT ./mlp-cw1-template.bbl
 INPUT mlp-cw1-template.bbl
 INPUT ./mlp-cw1-template.bbl
@@ -1024,6 +1029,7 @@ INPUT ./mlp-cw1-template.out
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txex.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
