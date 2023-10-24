@@ -38,7 +38,7 @@ and depth are increased by a lot, the model overfits the training data and retur
 
 %% Question 3: Summarise what your results show you about the effect of the tested approaches on overfitting and the performance of the trained model
 \newcommand{\questionThree} {
-\youranswer{Q3}
+\youranswer{Q3 - Summary}
 }
 
 %% Question 4: Give your overall conclusions
@@ -121,7 +121,8 @@ overfits on the training data. We can tackle the problem of overfitting by using
     E = E_\text{data} + \lambda_1 \sum_{i=1}^N |w_i| + \lambda_2 \sum_{i=1}^N w_i^2
 \end{equation}
 where $\lambda_1$ and $\lambda_2$ are the hyperparameters for the L1 and L2 regularisation respectively. \par The L1 regularisation is used to reduce the number of features by shrinking the coefficients of the less important features to 0. The L2 regularisation penalises the model for having large coefficients and shrinks them to a smaller scale.
-This helps in reducing the variance of the model and prevents overfitting. By adjusting the values of $\lambda_1$ and $\lambda_2$ appropriately, we can control if we want more of L1 or L2 penalties applied to the weights. This helps us in controlling the number of features and the size of the coefficients of the model.}
+By adjusting the values of $\lambda_1$ and $\lambda_2$ appropriately, we can find a right balance of L1 and L2 penalties that will help the model generalise over new or unseen data points reducing the overall variance and preventing overfitting. \par Sometimes while using L1 regularisation, 
+the model can get stuck at a local minima due to some of the parameters being set to 0. This problem can be mitigated by using L2 norms along with L1 norms. This is because the L2 norm is a smooth function and hence the model can easily escape the local minima.}
 }
 
 %% Question 13: Explain the experimental details (e.g. hyperparameters), discuss the results in terms of their generalisation performance and overfitting. Select and test the best performing model as part of this analysis.
@@ -132,14 +133,16 @@ This helps in reducing the variance of the model and prevents overfitting. By ad
 
 %% Question 14: Assume you were able to run 8 further experiments (8 specific hyperparameter configurations) where you could combine Dropout and L1, and/or Dropout and L2 regularisation. Which 8 runs would you pick and what question(s) would you aim to answer? Make sure you define the experiment setup, including any relevant hyperparameters
 \newcommand{\questionFourteen} {
-\youranswer{Question 14 - }
+\youranswer
+{Q14}
 }
 
 
 
-%% Question 15:
+%% Question 15: Briefly draw your conclusions based on the results from the previous sections (what are the take-away messages?), discussing them in the context of the overall literature, and conclude your report with a recommendation for future directions
 \newcommand{\questionFifteen} {
-\youranswer{Question 15 - Briefly draw your conclusions based on the results from the previous sections (what are the take-away messages?), discussing them in the context of the overall literature, and conclude your report with a recommendation for future directions}
+\youranswer
+{Q15}
 }
 
 %% - - - - - - - - - - - - FIGURES - - - - - - - - - - - - 
@@ -277,16 +280,16 @@ Question Table 3 - Fill in Table 3 with the results from your experiments for th
                  & 0.6                   &  80.7                &      0.549 & 0.593     \\
                  & 0.7 & 83.0 & 0.445 & 0.511  \\
                  & 0.85 & 85.1 &  0.329 &  0.434 \\
-                 & 0.97 & 85.4 &  0.244 & 0.457  \\
+                 & \textit{\textbf{0.97}} & \textit{\textbf{85.4}} & \textit{\textbf{0.244}} & \textit{\textbf{0.457}}  \\
     \midrule
         \multirow{4}*{L1 penalty}
-                 & 5e-4 & 79.5 & 0.642 & 0.658 \\
+                 & \textit{5e-4} & \textit{79.5} & \textit{0.642} & \textit{0.658} \\
                  & 1e-3 & 73.7 & 0.872 & 0.882 \\
                  & 5e-3 & 2.41 & 3.850 & 3.850 \\
                  & 5e-2 & 2.20 & 3.850 & 3.850 \\
     \midrule
         \multirow{4}*{L2 penalty}  
-                 & 5e-4 & 85.1 & 0.306 & 0.460 \\
+                 & \textit{5e-4} & \textit{85.1} & \textit{0.306} & \textit{0.460} \\
                  & 1e-3 & 85.0 & 0.364 & 0.454 \\
                  & 5e-3 & 81.3 & 0.586 & 0.607 \\
                  & 5e-2 & 39.2 & 2.258 & 2.256  \\      
