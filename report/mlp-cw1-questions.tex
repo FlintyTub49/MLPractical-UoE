@@ -230,8 +230,8 @@ Question Table 1 - Fill in Table 1 with the results from your experiments varyin
         \# Hidden Units & Val. Acc. & Train Error & Val. Error\\
     \midrule
          32            &    78.9   &  0.563  &   0.705            \\
-         64            &    80.9   &  0.345  &   0.809               \\
-         128           &    80.5   &  0.163  &   0.805           \\ 
+         64            &    80.9   &  0.345  &   0.660               \\
+         128           &    80.5   &  0.163  &   0.924           \\ 
     \bottomrule
     \end{tabular}
     \caption{Validation accuracy (\%) and training/validation error (in terms of cross-entropy error) for varying network widths on the EMNIST dataset.}
@@ -278,19 +278,19 @@ Question Table 3 - Fill in Table 3 with the results from your experiments for th
     \midrule
         \multirow{4}*{Dropout}
                  & 0.6                   &  80.7                &      0.549 & 0.593     \\
-                 & 0.7 & 83.0 & 0.445 & 0.511  \\
+                 & 0.7 & 82.7 & 0.447 & 0.509  \\
                  & 0.85 & 85.1 &  0.329 &  0.434 \\
                  & \textit{\textbf{0.97}} & \textit{\textbf{85.4}} & \textit{\textbf{0.244}} & \textit{\textbf{0.457}}  \\
     \midrule
         \multirow{4}*{L1 penalty}
                  & \textit{5e-4} & \textit{79.5} & \textit{0.642} & \textit{0.658} \\
-                 & 1e-3 & 73.7 & 0.872 & 0.882 \\
+                 & 1e-3 & 75.0 & 0.850 & 0.856 \\
                  & 5e-3 & 2.41 & 3.850 & 3.850 \\
                  & 5e-2 & 2.20 & 3.850 & 3.850 \\
     \midrule
         \multirow{4}*{L2 penalty}  
                  & \textit{5e-4} & \textit{85.1} & \textit{0.306} & \textit{0.460} \\
-                 & 1e-3 & 85.0 & 0.364 & 0.454 \\
+                 & 1e-3 & 84.8 & 0.362 & 0.460 \\
                  & 5e-3 & 81.3 & 0.586 & 0.607 \\
                  & 5e-2 & 39.2 & 2.258 & 2.256  \\      
     \bottomrule
