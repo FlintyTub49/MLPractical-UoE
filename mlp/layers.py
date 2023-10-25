@@ -689,7 +689,6 @@ class DropoutLayer(StochasticLayer):
             (batch_size, input_dim).
         """
         return grads_wrt_outputs * (outputs != 0)
-        # raise NotImplementedError
 
     def __repr__(self):
         return 'DropoutLayer(incl_prob={0:.1f})'.format(self.incl_prob)
