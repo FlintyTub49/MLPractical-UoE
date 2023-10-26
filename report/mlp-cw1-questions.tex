@@ -140,10 +140,21 @@ was then used to classify the test set of the EMNIST data. The accuracy of the m
 %% Question 14: Assume you were able to run 8 further experiments (8 specific hyperparameter configurations) where you could combine Dropout and L1, and/or Dropout and L2 regularisation. Which 8 runs would you pick and what question(s) would you aim to answer? Make sure you define the experiment setup, including any relevant hyperparameters
 \newcommand{\questionFourteen} {
 \youranswer
-{We can extend this experiment by testing a plethora of combinations of the dropout regularisation and L1 \& L2 penalties to fine tune the model further. We have already seen that each regularisation method is used for some specific task and has its own advantages and disadvantages. By combining these methods, we can try to mitigate the disadvantages 
-of one method by using the other. We can test the following combinations of the regularisation methods: \par \textbf{Dropout + L1 penalty} - This combination can be used to reduce the number of features in the model as L1 penalty will shrink the coefficients of the less important features to 0 and the dropout will
-prevent the model from overfitting the training data. \par \textbf{Dropout + L2 penalty} - This combination can be used to reduce the variance of the model and hence prevent overfitting. The L2 penalty will shrink the coefficients of the features to a smaller scale and the dropout will prevent the model from overfitting the training data. 
-\par \textbf{Dropout + L1 + L2 penalty} -}
+{We can extend this experiment by testing a plethora of combinations of the dropout regularisation and L1 \& L2 penalties to fine tune the model further. We have already seen that each regularisation method is used for a specific task and has its own advantages and disadvantages. By combining these methods, we can try to mitigate the disadvantages 
+of one method by using the other. Some of the combinations for the models that we can use are:
+\begin{itemize}
+    \item Dropout with low coefficient for L1 Penalties
+    \item Dropout with low coefficient for L2 Penalties
+    \item L1 Penalties and L2 Penalties
+    \item L1 \& L2 Penalties with Dropouts for layers with L1 Penalties
+    \item L1 \& L2 Penalties with Dropouts for layers with L2 Penalties
+    \item L1 \& L2 Penalties with Dropouts for layers with both L1 and L2 Penalties
+    \item Penalties only applied to weights
+    \item Penalties only applied to biases
+\end{itemize}
+These experiments would give us an idea about which regularisation methods work well together and what should be the hyperparameters for the combination of these methods. The dropouts control the number of neurons the model is using to train. Controlling this directly controls the capacity of the network and hence it is a crucial tool in preventing overfitting. 
+\par The L1 norms penalise the model for having too large gradients and bring them down to 0. A combination of L1 norms and Dropouts would promote a simpler model with small architecture which would help with generalisation and faster convergence. L2 norms also penalise the model for having large weights, but instead of reducing the weights to 0, it scales it down
+in a uniform scale. Dropouts with L2 will lead to a smoother model which will converge in fewer instances while still helping the performance of the model.}
 }
 
 
@@ -153,8 +164,8 @@ prevent the model from overfitting the training data. \par \textbf{Dropout + L2 
 \youranswer
 {In this report, we have discussed the problem of overfitting in machine learning models. We studied how increasing the width and depth of the model increased the model's ability to learn from the data and found that a model with more than required capacity is guaranteed to overfit the training data eventually. Consequentially, we looked at methods to tackle 
 this problem of overfitting. Experiments with dropout regularisation were carried out which help in removing the dependency of the model from certain specific neurons. Considering too many neurons caused the model to overfit whereas considering too few neurons made the model underfit the data. We then looked at L1/L2 norms which penalise the weights of the model 
-helping in preventing overfitting. Various experiments were formulated to combine dropout and L1/L2 norms to get the best of both regularisation methods and help the model performance. <MODEL PERFORMANCE>. Further studies should focus on using combined regularisation methods like Elastic Net to prevent overfitting. Early stopping is another approach that can be 
-explored to combat overfitting in machine learning models.}
+helping in preventing overfitting. Various experiments were formulated to combine the power of dropout and L1/L2 norms to get the best of all the regularisation methods and help the model performance. These formulations can help us get a good idea about combinations of regularisation methods and their hyperparameters that work well together. Further studies should
+focus on using combined regularisation methods like Elastic Net to prevent overfitting. Early stopping is another approach that can be explored to combat overfitting in machine learning models.}
 }
 
 %% - - - - - - - - - - - - FIGURES - - - - - - - - - - - - 
