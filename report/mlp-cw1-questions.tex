@@ -38,7 +38,8 @@ and depth are increased by a lot, the model starts overfitting the training data
 
 %% Question 3: Summarise what your results show you about the effect of the tested approaches on overfitting and the performance of the trained model
 \newcommand{\questionThree} {
-\youranswer{Q3 - Summary}
+\youranswer
+{that the model which was just using dropout regularisation was performing the best. It was able to properly learn from the training data and returned high accuracy scores on the testing data while keeping the error of the model low.}
 }
 
 %% Question 4: Give your overall conclusions
@@ -139,7 +140,10 @@ was then used to classify the test set of the EMNIST data. The accuracy of the m
 %% Question 14: Assume you were able to run 8 further experiments (8 specific hyperparameter configurations) where you could combine Dropout and L1, and/or Dropout and L2 regularisation. Which 8 runs would you pick and what question(s) would you aim to answer? Make sure you define the experiment setup, including any relevant hyperparameters
 \newcommand{\questionFourteen} {
 \youranswer
-{We can extend this experiment by testing a plethora of combinations of the dropout regularisation and L1 \& L2 penalties to fine tune the model further. We have already seen that each regularisation method is used for some specific task  }
+{We can extend this experiment by testing a plethora of combinations of the dropout regularisation and L1 \& L2 penalties to fine tune the model further. We have already seen that each regularisation method is used for some specific task and has its own advantages and disadvantages. By combining these methods, we can try to mitigate the disadvantages 
+of one method by using the other. We can test the following combinations of the regularisation methods: \par \textbf{Dropout + L1 penalty} - This combination can be used to reduce the number of features in the model as L1 penalty will shrink the coefficients of the less important features to 0 and the dropout will
+prevent the model from overfitting the training data. \par \textbf{Dropout + L2 penalty} - This combination can be used to reduce the variance of the model and hence prevent overfitting. The L2 penalty will shrink the coefficients of the features to a smaller scale and the dropout will prevent the model from overfitting the training data. 
+\par \textbf{Dropout + L1 + L2 penalty} -}
 }
 
 
@@ -147,7 +151,10 @@ was then used to classify the test set of the EMNIST data. The accuracy of the m
 %% Question 15: Briefly draw your conclusions based on the results from the previous sections (what are the take-away messages?), discussing them in the context of the overall literature, and conclude your report with a recommendation for future directions
 \newcommand{\questionFifteen} {
 \youranswer
-{Q15}
+{In this report, we have discussed the problem of overfitting in machine learning models. We studied how increasing the width and depth of the model increased the model's ability to learn from the data and found that a model with more than required capacity is guaranteed to overfit the training data eventually. Consequentially, we looked at methods to tackle 
+this problem of overfitting. Experiments with dropout regularisation were carried out which help in removing the dependency of the model from certain specific neurons. Considering too many neurons caused the model to overfit whereas considering too few neurons made the model underfit the data. We then looked at L1/L2 norms which penalise the weights of the model 
+helping in preventing overfitting. Various experiments were formulated to combine dropout and L1/L2 norms to get the best of both regularisation methods and help the model performance. <MODEL PERFORMANCE>. Further studies should focus on using combined regularisation methods like Elastic Net to prevent overfitting. Early stopping is another approach that can be 
+explored to combat overfitting in machine learning models.}
 }
 
 %% - - - - - - - - - - - - FIGURES - - - - - - - - - - - - 
