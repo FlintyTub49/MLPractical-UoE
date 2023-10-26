@@ -132,14 +132,14 @@ the model can get stuck at a local minima due to some of the parameters being se
 probabilities ranging from 0.6 to almost 1 and found that the validation accuracy didn't increase much even though more neurons were available for the model to extract the patterns from the data. The validation accuracy increased at a slow pace with availability of more neurons, but the increase in generalisation gap was relatively high, hinting at 
 overfitting of the model (Figure 4a).\par Using another hyperparameter, we controlled the amount of weight penalties that were applied to the model using the L1 \& L2 norms. In case of L1 penalties, as the coefficients of the penalty increased, the error increased while simultaneously decreasing the accuracy of the model. Since L1 penalties add the 
 absolute values of the weights to the error, this told us that some features are relatively more important than others for prediction of the model. L2 penalties had a similar but not as extreme effect when compared to L1 penalties. Even though Figure 4b shows that the generalisation gap is decreasing, it is because the training error is also increasing 
-signifying that the model is unable to fit the training data well.\par From these testings, we found that the dropout model with inclusion probability of 0.97 was performing the best on the validation set. This model was then used to classify the test division of the EMNIST data. The accuracy of the model on the test data is \textit{84.52\%} and the 
-error is \textit{0.483}. This is because the model is able to generalise well over unseen data and has not overfit on the training set.}
+signifying that the model is unable to fit the training data well.\par From these testings, we concluded that the dropout model with inclusion probability of 0.85 was performing the best. Even though the model with inclusion probability of 0.97 has a slightly higher validation accuracy, it comes at the cost of increased generalisation gap. This model 
+was then used to classify the test set of the EMNIST data. The accuracy of the model on the test data is \textit{84.0\%} and the error is \textit{0.471}. This is because the model is able to generalise well over unseen data and has not overfit on the training set.}
 }
 
 %% Question 14: Assume you were able to run 8 further experiments (8 specific hyperparameter configurations) where you could combine Dropout and L1, and/or Dropout and L2 regularisation. Which 8 runs would you pick and what question(s) would you aim to answer? Make sure you define the experiment setup, including any relevant hyperparameters
 \newcommand{\questionFourteen} {
 \youranswer
-{Q14 We can extend this experiment by testing a plethora of combinations of the dropout regularisation and L1 \& L2 penalties to fine tune the model further.}
+{We can extend this experiment by testing a plethora of combinations of the dropout regularisation and L1 \& L2 penalties to fine tune the model further. We have already seen that each regularisation method is used for some specific task  }
 }
 
 
@@ -284,8 +284,8 @@ Question Table 3 - Fill in Table 3 with the results from your experiments for th
         \multirow{4}*{Dropout}
                  & 0.6                   &  80.7                &      0.549 & 0.593     \\
                  & 0.7 & 82.7 & 0.447 & 0.509  \\
-                 & 0.85 & 85.1 &  0.329 &  0.434 \\
-                 & \textit{\textbf{0.97}} & \textit{\textbf{85.4}} & \textit{\textbf{0.244}} & \textit{\textbf{0.457}}  \\
+                 & \textit{\textbf{0.85}} & \textit{\textbf{85.1}} &  \textit{\textbf{0.329}} &  \textit{\textbf{0.434}} \\
+                 & 0.97 & 85.4 & 0.244 & 0.457  \\
     \midrule
         \multirow{4}*{L1 penalty}
                  & \textit{5e-4} & \textit{79.5} & \textit{0.642} & \textit{0.658} \\
