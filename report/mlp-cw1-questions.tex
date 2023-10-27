@@ -32,14 +32,14 @@ learnings for unseen data which leads to poor performance on new data points.}
 %% Question 2: Summarise the effect increasing width and depth of the architecture had on overfitting.
 \newcommand{\questionTwo} {
 \youranswer
-{Increasing the depth and width slightly increases the model performance overall. If either or both the width
-and depth are increased by a lot, the model starts overfitting the training data and returns low accuracy scores for any unseen data.}
+{slightly results in improved model performance overall. If either or both the width
+and depth are increased substantially, the model starts overfitting the training data and returns low accuracy scores for any unseen data.}
 }
 
 %% Question 3: Summarise what your results show you about the effect of the tested approaches on overfitting and the performance of the trained model
 \newcommand{\questionThree} {
 \youranswer
-{that the model which was just using dropout regularisation was performing the best. It was able to properly learn from the training data and returned high accuracy scores on the testing data while keeping the error of the model low.}
+{the model which was just using dropout regularisation was performing the best. It was able to properly learn from the training data and return high accuracy scores on the testing data while keeping the error of the model low.}
 }
 
 %% Question 4: Give your overall conclusions
@@ -54,26 +54,23 @@ and depth are increased by a lot, the model starts overfitting the training data
 {Overfitting causes a model to start recognising random deviances and noise present in the training data as a regularity rather than learning the underlying patterns.
 This poor generalisation leads to the model struggling to capture the trends on unseen data points and hence performing poorly on them. This makes the model less reliable to be used in real world applications.
 Another direct consequence of overfitting is that it skews the relationship between variables affecting the interpretability of the model and making it difficult to fix the model.
-Overfitting a model also wastes a lot of resources as it would require a lot of computational power to create a model which won't be able to handle new data points very well.}
+Overfitting a model also wastes a lot of resources since it requires a lot of computational power to create a model which will be unable to handle new data points efficiently.}
 }
 
 %% Question 6: Explain the relevance of ``network capacity'' to overfitting
 \newcommand{\questionSix} {
 \youranswer
 {Network capacity refers to the ability of the model to learn the general characteristics of the data. When a model is more complex, it starts memorising the data rather than learning the trends from it.
-This usually happens when the model has more room than what is needed for capturing the patterns in the data. If the dataset is small or simple, the basic essense of it can be captured with a small model itself.
+This usually happens when the model has more room than what is needed for capturing the patterns in the data. If the dataset is small or simple, the basic essence of it can be captured with a small model itself.
 If in scenarios like this, a complex model is used, the model has the capacity to learn more than the general features of the data and will also start to fit the outliers in the data leading to overfitting on the training set.
-Thus it is very important to choose an appropriate model for the data given to us otherwise choosing a complex model with more network capacity will result in overfitting of the data.}
+Thus it is essential to choose an appropriate model for the data provided to us, otherwise choosing a complex model with more network capacity will result in overfitting of the data.}
 }
 
 %% Question 7: Explain what these figures contain and how the curves evolve, and spot where overfitting occurs. Reason based on the min/max points and velocities (direction and magnitude of change) of the accuracy and error curves
 \newcommand{\questionSeven} {
 \youranswer
 % Describe figure 1a
-% all the different width models give very similar accuracy. The models increase the training and validation accuracy rapidly in the first few epochs. After the inital jump, the lines flatten out and marginal improvement is seen in the training accuracy of all the models. On the other hand, 
-% the validation accuracy remains similar and doesn't improve much. This is where the overfitting has started, signifying that the model has learned all it could from the training data and now its trying to fit the noise in the data. \par This is further supported 
-% by Figure 1b, where we also see the error drop at a rapid rate with the first few epochs. But as the epochs increase, the error on the validation set starts increasing signifying that the model has started to memorise the training data rather than generalising the learnings from it.
-{the training accuracy of the model increases rapidly in the first few epochs and then gradually slows down as the epochs continue to run. Even though the validation accuracy also increases at a good rate in the first few epochs, it starts flattening out at a point and then slowly starts to 
+{the training accuracy of the model increases rapidly in the first few epochs and then gradually slows down as the epochs continue to run. Even though the validation accuracy increases at a good rate in the first few epochs, it starts flattening out after a point and then slowly starts to 
 decline. This is the point where overfitting has started, stating that the model has learned the training data and is unable to generalise it to the validation data. This is further validated by the graph in Figure 1b which plots the error of the model on the training and validation dataset. 
 We can see that the training error reduces rapidly at first and then eventually tends to 0. After a rapid initial decline in the error of the validation set, the error starts increasing at the same time when the accuracy of the validation set starts decreasing. This is due to the fact the model has now overfit 
 and is struggling to process unseen data points.}
@@ -82,16 +79,16 @@ and is struggling to process unseen data points.}
 %% Question 8: Present your network width experiment results by using the relevant figure and table
 \newcommand{\questionEight} {
 \youranswer
-{the final validation accuracy of all the models is very close (Figure 2a) indicating that the models performance very similarly. In Figure 2b, if we look at the train and the validation error, we can see the difference in the performance of the models. The training error of the model with 32 hidden units is the highest 
-and the one with 128 hidden units is the lowest. This would ideally mean that the model with 128 neurons would be perform the best. But if we look at the validation error, we can see the 128 units model has the highest validation error. This means that model has overfit the training data and is performing relatively
+{the final validation accuracy of all the models is very close (Figure 2a) indicating that the models perform very similarly. In Figure 2b, if we look at the train and the validation error, we can see the difference in the performance of the models. The training error of the model with 32 hidden units is the highest 
+and the one with 128 hidden units is the lowest. This would ideally mean that the model with 128 neurons would perform the best. But if we look at the validation error, we can see the 128 units model has the highest validation error. This means that model has overfit the training data and is performing relatively
 worse on data it has not seen before when compared to the 32 units model. \par From Table 2, we can see that the model with 64 hidden units has the highest validation accuracy and the lowest validation error signifying that the model has learned from the training data and is able to generalise the best on unseen data out of all the 3 models. 
-This model is relatively not too complex and is performing better than a model with more width.}
+This model is relatively less complex and is performing better than a model with more width.}
 }
 
 %% Question 9: Discuss whether varying width affects the results in a consistent way, and whether the results are expected and match well with the prior knowledge (by which we mean your expectations as are formed from the relevant Theory and literature)
 \newcommand{\questionNine} {
 \youranswer
-{Changing the width of the model gave us a variety of results. We saw that a model with more width (more complex model) is not necessarily the best model for most scenarios. Even though the model might slightly perform better on the training data, it gives a higher error and not a significant increase on the accuracy for new data points.
+{Changing the width of the model gave us a variety of results. We saw that a model with more width (more complex model) is not necessarily the best model for most scenarios. Even though the model might slightly perform better on the training data, it gives higher error and not a significant increase on the accuracy for new data points.
 The results we've achieved also prove the point about the network capacity, where a higher width model has the more than the required capacity to learn the features of the data and thus it starts fitting the outliers to the data leading to overfitting. This won't always be the case as this test was conducted on a relatively simple dataset.
 If the data to be processed had more features, we would require a model with more width to learn the underlying patterns in the data. A complex model in this scenario won't overfit because its capacity is being completely utilised in learning the features of the data.}
 }
