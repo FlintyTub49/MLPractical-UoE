@@ -97,16 +97,16 @@ If the data to be processed had more features, we would require a model with mor
 \newcommand{\questionTen} {
 \youranswer
 {models of different depth are all capable of classifying classes of EMNIST dataset. From Figure 3a, providing the models with more depth has enabled them to extract features from the data efficiently and give excellent accuracy scores. Irrespective of their depth, in case of validation data, all of them are performing similarly and giving 
-accuracy of around 80\% (Table 2). The rise of accuracy is very steep in the first 10 epochs, and then it is slow gradual improvement in training accuracy and barely any change in the validation accuracy. \par The error behaves very differently and gives a good understanding of the models. In Figure 3b, we can see that the error of all the models on 
-the training set approaches 0, but on the validation set starts increasing as the epochs increase. This is the point of overfitting; and the magnitude of the error indicates how much the model has learned the training data. The model with the highest depth has the highest capacity and hence has been able to learn the train set the best resulting 
+accuracy of around 80\% (Table 2). The rise of accuracy is very steep in the first 10 epochs, followed by slow gradual improvement in training accuracy and barely any change in the validation accuracy. \par The error behaves very differently and gives a good understanding of the models. In Figure 3b, we can see that the error of all the models on 
+the training set approaches 0, but on the validation set starts increasing as the epochs increase. This is the point of overfitting; the magnitude of the error indicates how much the model has learned the training data. The model with the highest depth has the highest capacity, thereby learning the train set the best, resulting 
 in it having the highest error on the validation set (from Table 2).}
 }
 
 %% Question 11: Discuss whether varying depth affects the results in a consistent way, and whether the results are expected and match well with the prior knowledge (by which we mean your expectations as are formed from the relevant Theory and literature)
 \newcommand{\questionEleven} {
 \youranswer
-{Increasing the depth of the model can be helpful in processing large or complex datasets. But in other situations it can turn out to be counter productive and as the model will overfit the data. This is because certain capability is required for the model to process the data, but if the model has more room to capture features, it'll start fitting the 
-noise to the dataset. As the depth of the model increases, there are more neurons available which allow the model to extract more features from the dataset allowing it to overfit the training data and result in poor accuracy scores for unseen data. It also becomes computationally expensive to train the model and the resources will be wasted if the model
+{Increasing the depth of the model can be helpful in processing large or complex datasets. But in other situations it can turn out to be counter productive and as the model will overfit the data. This is because certain capability is required for the model to process the data, however if the model has more room to capture features, it will start fitting the 
+noise to the dataset. As the depth of the model increases, there are more neurons available which allow the model to extract more features from the dataset allowing it to overfit the training data and result in poor accuracy scores for unseen data. It also becomes computationally expensive to train the model and resulting in resource wastage if the model 
 overfits on the training data. We can tackle the problem of overfitting by using methods like Dropout and Regularisation which penalise the model for generalising too much to the training set preventing overfitting.}
 }
 
@@ -129,31 +129,31 @@ the model can get stuck at a local minima due to some of the parameters being se
 {We introduce a new hyperparameter for controlling the dropout in the model which is the inclusion probability. This hyperparameter specifies the percentage of the neurons that should be considered and the rest are converted to 0. This helps the model become less reliant on particular neurons and prevent overfitting. We tested with different inclusion 
 probabilities ranging from 0.6 to almost 1 and found that the validation accuracy didn't increase much even though more neurons were available for the model to extract the patterns from the data. The validation accuracy increased at a slow pace with availability of more neurons, but the increase in generalisation gap was relatively high, hinting at 
 overfitting of the model (Figure 4a).\par Using another hyperparameter, we controlled the amount of weight penalties that were applied to the model using the L1 \& L2 norms. In case of L1 penalties, as the coefficients of the penalty increased, the error increased while simultaneously decreasing the accuracy of the model. Since L1 penalties add the 
-absolute values of the weights to the error, this told us that some features are relatively more important than others for prediction of the model. L2 penalties had a similar but not as extreme effect when compared to L1 penalties. Even though Figure 4b shows that the generalisation gap is decreasing, it is because the training error is also increasing 
+absolute values of the weights to the error, we note that some features are relatively more important than others for prediction of the model. L2 penalties had a similar but not as extreme effect when compared to L1 penalties. Even though Figure 4b shows that the generalisation gap is decreasing, it is because the training error is also increasing 
 signifying that the model is unable to fit the training data well.\par From these testings, we concluded that the dropout model with inclusion probability of 0.85 was performing the best. Even though the model with inclusion probability of 0.97 has a slightly higher validation accuracy, it comes at the cost of increased generalisation gap. This model 
 was then used to classify the test set of the EMNIST data. The accuracy of the model on the test data is \textit{84.0\%} and the error is \textit{0.471}. This is because the model is able to generalise well over unseen data and has not overfit on the training set. We also noted that the model with 0.97 inclusion probability had a slightly higher accuracy 
-on the test set of $84.55\%$. Although the accuracy is higher, this cannot be a factor in choosing a model because we can't check the accuracy scores on the test set in real life scenarios.}
+on the test set of \textit{84.55\%}. Although the accuracy is higher, this cannot be a factor in choosing a model since we cannot check the accuracy scores on the test set in real life scenarios.}
 }
 
 %% Question 14: Assume you were able to run 8 further experiments (8 specific hyperparameter configurations) where you could combine Dropout and L1, and/or Dropout and L2 regularisation. Which 8 runs would you pick and what question(s) would you aim to answer? Make sure you define the experiment setup, including any relevant hyperparameters
 \newcommand{\questionFourteen} {
 \youranswer
 {We can extend this experiment by testing a plethora of combinations of the dropout regularisation and L1 \& L2 penalties to fine tune the model further. We have already seen that each regularisation method is used for a specific task and has its own advantages and disadvantages. By combining these methods, we can try to mitigate the disadvantages 
-of one method by using the other. Some of the combinations for the models that we can use are:
+of one method by using the other. Some of the combinations for the models that we can use are ($\alpha$ signifies the learning rate):
 \begin{itemize}
-    \item $\alpha$ = 1e-4; Dropout = 0.75; L1 Penalty = 5e-4
-    \item $\alpha$ = 1e-4; Dropout = 0.97; L1 Penalty = 1e-3
-    \item $\alpha$ = 1e-4; Dropout = 0.75; L2 Penalty = 5e-4
-    \item $\alpha$ = 5e-4; Dropout = 0.97; L2 Penalty = 1e-3
-    \item $\alpha$ = 1e-4; L1 Penalty = 5e-4; L2 Penalty = 5e-4
-    \item $\alpha$ = 1e-4; L1 Penalty = 3e-4; L2 Penalty = 9e-4
-    \item $\alpha$ = 1e-4; L1 Penalty = 5e-4; L2 Penalty = 1e-3; Dropout = 0.9
-    \item $\alpha$ = 1e-4; L1 Penalty = 1e-4; L2 Penalty = 9e-4; Dropout = 0.9
+    \item $\alpha$ = $1e-4$; Dropout = 0.75; L1 Penalty = $5e-4$
+    \item $\alpha$ = $1e-4$; Dropout = 0.97; L1 Penalty = $1e-3$
+    \item $\alpha$ = $1e-4$; Dropout = 0.75; L2 Penalty = $5e-4$
+    \item $\alpha$ = $5e-4$; Dropout = 0.97; L2 Penalty = $1e-3$
+    \item $\alpha$ = $1e-4$; L1 Penalty = $5e-4$; L2 Penalty = $5e-4$
+    \item $\alpha$ = $1e-4$; L1 Penalty = $3e-4$; L2 Penalty = $9e-4$
+    \item $\alpha$ = $1e-4$; L1 Penalty = $5e-4$; L2 Penalty = $1e-3$; Dropout = 0.9
+    \item $\alpha$ = $1e-4$; L1 Penalty = $1e-4$; L2 Penalty = $9e-4$; Dropout = 0.9
 \end{itemize}
 These experiments would give us an idea about which regularisation methods work well together. The dropouts control the number of neurons the model is using to train. Controlling this directly controls the capacity of the network and hence it is a crucial tool in preventing overfitting. 
 \par The L1 norms penalise the model for having too large gradients and bring them down to 0. A combination of L1 norms and Dropouts would promote a simpler model with small architecture which would help with generalisation and faster convergence. L2 norms also penalise the model for having large weights, but instead of reducing the weights to 0, it scales it down
 in a uniform scale. Dropouts with L2 will lead to a smoother model which will converge in fewer instances while still helping the performance of the model. The values of hyperparameters above will check well performing regularisation methods in combination with another relatively low performing regulariser to find the ideal balance of the parameters. We found that 
-the model with learning rate 1e-4, L1 penalty 5e-4, L2 penalty 1e-3 and dropout inclusion probability of 0.9 performed the best giving an validation accuracy of $83.5\%$}
+the model with learning rate $1e-4$, L1 penalty $5e-4$, L2 penalty $1e-3$ and dropout inclusion probability of 0.9 performed the best giving an validation accuracy of \textit{83.5\%}}
 }
 
 
