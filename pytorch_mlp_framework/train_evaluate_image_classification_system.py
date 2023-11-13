@@ -3,6 +3,14 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 
+import sys
+import os
+os.environ["MLP_DATA_DIR"] = '/home/arthakhouri/MLPractical-UoE/data'
+sys.path.append('/home/arthakhouri/MLPractical-UoE/')
+
+import warnings
+warnings.filterwarnings("ignore")
+
 import mlp.data_providers as data_providers
 from pytorch_mlp_framework.arg_extractor import get_args
 from pytorch_mlp_framework.experiment_builder import ExperimentBuilder
