@@ -49,6 +49,9 @@ class ExperimentBuilder(nn.Module):
             self.device = torch.device('cpu')  # sets the device to be CPU
             print(self.device)
 
+        # self.device = torch.device('mps') # sets the device to mps
+        # print(f'Final Device: {self.device}')
+
         print('here')
 
         self.model.reset_parameters()  # re-initialize network parameters
